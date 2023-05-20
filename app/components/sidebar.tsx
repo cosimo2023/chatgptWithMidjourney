@@ -119,9 +119,9 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+        <div className={styles["sidebar-title"]}>隆相智能助理</div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          人人都能公平分享人工智能的成果.
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -136,13 +136,11 @@ export function SideBar(props: { className?: string }) {
           onClick={() => navigate(Path.NewChat, { state: { fromHome: true } })}
           shadow
         />
-        <IconButton
-          icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
-          className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
-          shadow
-        />
+                 <div className={styles["sidebar-action"]}>
+            <a href="https://stchat.lonxang.com/" title="自助购买服务！" target="_blank">
+              <IconButton icon={<GithubIcon />} shadow />
+            </a>
+          </div>
       </div>
 
       <div
@@ -174,9 +172,10 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
+             <a href="https://www.lonxang.com/about_1/" title="服务提供商！" target="_blank">
+              隆相中国
             </a>
+
           </div>
         </div>
         <div>
